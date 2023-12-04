@@ -1,0 +1,25 @@
+.example-container mat-form-field + mat-form-field {
+  margin-left: 8px;
+}
+
+.container-imagen {
+  margin: auto;
+  align-items: center;
+}
+
+.main {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+}
+
+.form-signin {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.form-floating {
+  position: relative;
+}
