@@ -1,5 +1,5 @@
 <mat-toolbar>
-   Proyecto:
+   Proyecto: {{ project.nombre || '' }}
    <button
    mat-icon-button *ngIf="sidenav.mode === 'over'"
    (click)="sidenav.toggle()"

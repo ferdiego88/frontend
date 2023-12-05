@@ -9,6 +9,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
 import {MatCardModule} from '@angular/material/card';
+import {DragDropModule} from '@angular/cdk/drag-drop';
 
 
 const materialModules = [
@@ -21,6 +22,7 @@ const materialModules = [
   MatSelectModule,
   MatInputModule,
   MatCardModule,
+  DragDropModule,
 ]
 
 @NgModule({
