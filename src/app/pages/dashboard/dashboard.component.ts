@@ -1,6 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
 import { BreakpointObserver } from '@angular/cdk/layout';
+import { UsuarioService } from 'src/app/services/usuario.service';
 
 
 @Component({
@@ -12,7 +13,8 @@ export class DashboardComponent {
 
   @ViewChild(MatSidenav) sidenav!: MatSidenav
 
-  constructor(private observer: BreakpointObserver) {
+  constructor(private observer: BreakpointObserver,
+              public usuarioService: UsuarioService) {
 
   }
 
@@ -30,6 +32,10 @@ export class DashboardComponent {
         this.sidenav.open();
       }
     });
+  }
+
+  logout() {
+     this.usuarioService.logout();
   }
 
 }

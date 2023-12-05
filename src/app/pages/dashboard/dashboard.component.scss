@@ -1,5 +1,7 @@
 mat-toolbar {
+  display: grid;
   background: #0d6efd;
+  grid-template-columns: 80% 20%;
   color: #ffff;
 }
 
@@ -69,3 +71,9 @@ mat-divider {
 mat-sidenav-container {
   height: calc(100vh - 65px);
 }
+
+.logout {
+  background: #0d6efd;
+}
+
+
