@@ -3,6 +3,7 @@ import { NgModule} from '@angular/core';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProyectsListComponent } from './proyects-list/proyects-list.component';
 import { AuthGuard } from '../guard/auth.guard';
+import { TasksListComponent } from './tasks-list/tasks-list.component';
 
 const routes: Routes = [
 
@@ -10,9 +11,13 @@ const routes: Routes = [
     canActivate: [AuthGuard]
   ,
   children: [
-      { path: '', component: ProyectsListComponent },
+      { path: '', component: TasksListComponent },
   ]
 },
+
+ {path: 'proyectos', component: ProyectsListComponent,
+  canActivate: [AuthGuard]
+}
 
 ];
 

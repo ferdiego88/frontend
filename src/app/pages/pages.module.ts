@@ -6,6 +6,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { SidebarComponent } from '../shared/sidebar/sidebar.component';
 import { ProyectsListComponent } from './proyects-list/proyects-list.component';
 import { MaterialModule } from '../modules/material/material.module';
+import { TasksListComponent } from './tasks-list/tasks-list.component';
 
 
 const paginas = [
@@ -16,7 +17,8 @@ const paginas = [
 
 @NgModule({
   declarations: [
-    paginas
+    paginas,
+    TasksListComponent
   ],
   imports: [
     CommonModule,

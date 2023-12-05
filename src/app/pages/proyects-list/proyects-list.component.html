@@ -1,1 +1,18 @@
-<p>proyects-list works!</p>
+<div class="card">
+  <div class="card-header">
+    Seleccione el Proyecto
+  </div>
+  <div class="card-body">
+    <select class="form-select" aria-label="Default select example" (change)="onSeleccionChange($event)">
+      <option selected>Seleccione</option>
+      <option *ngFor="let project of projects" [value]="[project.id]"> {{ project.nombre }} </option>
+    </select>
+    <br>
+    <button class="btn btn-primary" routerLink="/dashboard"
+      [disabled]="!valorSeleccionado"
+      (click)="irDashBoard()"
+    >
+    Ir al Proyecto
+  </button>
+  </div>
+</div>
