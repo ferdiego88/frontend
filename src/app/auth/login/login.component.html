@@ -1,5 +1,9 @@
 <main class="main">
-  <form class="form-signin">
+  <form class="form-signin"
+        autocomplete="off"
+        [formGroup]="loginForm"
+        (ngSubmit)="login()"
+        >
     <div class="container-image">
       <img class="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/2048px-Angular_full_color_logo.svg.png"
        alt="Angular" width="150" height="150">
@@ -8,21 +12,25 @@
 
 
     <div class="form-floating">
-      <input type="email" class="form-control" id="floatingEmail" placeholder="name@example.com">
+      <input type="email" [ngModel]="email" class="form-control" id="floatingEmail" placeholder="name@example.com" formControlName="email">
       <label for="floatingEmail">Correo Electronico</label>
     </div>
 
     <div class="form-floating">
-      <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+      <input type="password" class="form-control" id="floatingPassword" placeholder="Password" formControlName="password">
       <label for="floatingPassword">Password</label>
     </div>
 
     <div class="checkbox mb-3">
       <label>
-        <input type="checkbox" value="remember-me"> Iniciar Sesión
+        <input type="checkbox" value="remember-me" formControlName="remember"> Recuerdáme
       </label>
     </div>
     <button class="w-100 btn btn-lg btn-primary" type="submit"> Iniciar Sesion </button>
+    <div>
+      ¿No tienes una cuenta?
+      <a routerLink="/register"> Registrate</a>
+    </div>
     <p class="mt-5 mb-3 text-muted">© 2023</p>
   </form>
 </main>

@@ -2,3 +2,31 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.example-container mat-form-field + mat-form-field {
+  margin-left: 8px;
+}
+
+.container-imagen {
+  margin: auto;
+  align-items: center;
+}
+
+.main {
+  display: grid;
+  margin-left: 25%;
+  margin-right: 25%;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+}
+
+.form-signin {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.form-floating {
+  position: relative;
+}
+
