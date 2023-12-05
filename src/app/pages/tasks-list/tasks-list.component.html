@@ -5,11 +5,17 @@
     <div
       cdkDropList
       #todoList="cdkDropList"
-      [cdkDropListData]="todo"
+      [cdkDropListData]="this.todo"
       [cdkDropListConnectedTo]="[doingList]"
       class="box-list"
       (cdkDropListDropped)="drop($event)">
-      <div class="example-box" *ngFor="let item of todo" cdkDrag>{{item}}</div>
+      <div class="example-box" *ngFor="let item of todo" cdkDrag>
+        Título: {{item.titulo }}
+        <br>
+        Descripción : {{item.descripcion}}
+        <br>
+        Estado: {{ item.estado }}
+      </div>
     </div>
   </div>
 
@@ -19,11 +25,17 @@
     <div
       cdkDropList
       #doingList="cdkDropList"
-      [cdkDropListData]="doing"
+      [cdkDropListData]="this.doing"
       [cdkDropListConnectedTo]="[doneList]"
       class="box-list"
       (cdkDropListDropped)="drop($event)">
-      <div class="example-box" *ngFor="let item of doing" cdkDrag>{{item}}</div>
+      <div class="example-box" *ngFor="let item of doing" cdkDrag>
+        Título: {{item.titulo}}
+        <br>
+        Descripción : {{item.descripcion}}
+        <br>
+        Estado: {{ item.estado }}
+      </div>
     </div>
   </div>
 
@@ -33,11 +45,17 @@
     <div
       cdkDropList
       #doneList="cdkDropList"
-      [cdkDropListData]="done"
+      [cdkDropListData]="this.done"
       [cdkDropListConnectedTo]="[doingList]"
       class="box-list"
       (cdkDropListDropped)="drop($event)">
-      <div class="example-box" *ngFor="let item of done" cdkDrag>{{item}}</div>
+      <div class="example-box" *ngFor="let item of done" cdkDrag>
+        Título: {{item.titulo}}
+        <br>
+        Descripción : {{item.descripcion}}
+        <br>
+        Estado: {{ item.estado }}
+      </div>
     </div>
   </div>
 
